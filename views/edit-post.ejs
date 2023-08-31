@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <%- include("./shared/head") %>
+
+</head>
+<body>
+    <form action="/submit-edit/<%= info.id%>" method="POST">
+        <label for="title">Title</label>
+        <input id="title" type="text" name="title" placeholder="Title" value="<%= info.title%>" required>
+
+        <br/><br>
+        <label for="desc">Description</label>
+        <input id="desc" type="text" name="desc" placeholder="Description" value="<%= info.desc%>" required>
+
+        <br/><br>
+        <button class="btn btn-outline-primary">Edit Article</button>
+
+    </form>
+    <a href="/delete-post/<%= info.id%>" class="btn btn-outline-primary">Delete</a>
+
+    <a href="/" class="btn btn-outline-primary">Back</a>
+
+</body>
+</html>

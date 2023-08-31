@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <%- include("./shared/head") %>
+
+</head>
+<body>
+    <h1>The New York Times</h1> <a href="/new/article">Add new article</a>
+
+<div class="post">
+    <% if (posts.length>0){ %>
+        <% posts.forEach(post=>{ %>
+    <div class="card">
+        <a href="/article/<%=post._id%>"><h2><%=post.title %></h2></a>
+
+        <h6><%= post.desc %></h6>
+    </div>
+        <% }) %>
+    <%} else {%> 
+        <p>No Posts For Today</p>
+
+    <% } %>
+
+
+
+</div>
+</body>
+</html>
